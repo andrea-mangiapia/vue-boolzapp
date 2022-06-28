@@ -1,0 +1,52 @@
+/* ROOT */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* COMMON */
+.flex {
+    display: flex;
+}
+/* WEB APP */
+
+.am-app-bg {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 20%, rgba(213,219,218,1) 20%);
+}
+
+.am-app {
+    max-width: 1000px;
+    height: 95%;
+    min-height: 680px;
+    background-color: #eaeaea;
+}
+
+.am-bar-profile {
+    height: 55px;
+    background-color: #eaeaea;
+}
+
+/* Column Left */
+.am-col-left {
+    width: 320px;
+    background-color: white;
+    
+}
+.am-notice {
+    background-color: #8edafb;
+    height: 60px;
+}
+
+/* Column Right */
+.am-col-right {
+    width: 650px;
+    background-image: url(../img/mine.jpg) ;
+}
+.am-bar-profile-right {
+    border-left: 1px solid gray;
+}
