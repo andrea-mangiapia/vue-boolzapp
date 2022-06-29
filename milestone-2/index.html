@@ -96,24 +96,16 @@
                     <!-- Messages -->
                     <div class="am-messages">
                         <div class="am-container-messages am-flex">
-                            <!-- Message Received -->
-                            <div class="am-msg am-message-received am-flex">
+                            <!-- Single Message -->
+                            <div v-for="(message, index) in contacts[currentUserActive].messages" class="am-msg am-flex" :class="message.status === 'received' ? 'am-message-received' : 'am-message-sent'">
                                 <div class="am-msg-text">
-                                    Messaggio ricevuto
+                                   {{message.text}}
                                 </div>
                                 <div class="am-msg-date">
-                                    10/01/2020 15:30:55                                   
-                                </div>
-                            </div>
-                            <!-- Message Sent -->
-                            <div class="am-msg am-message-sent am-flex">
-                                <div class="am-msg-text">
-                                    Messaggio spedito Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque a repellendus hic nulla, nisi, iusto placeat veniam quisquam necessitatibus quasi nesciunt dolorum molestiae.
-                                </div>
-                                <div class="am-msg-date">
-                                    10/01/2020 15:30:55                                   
+                                    {{message.date}}                         
                                 </div>            
                             </div>
+
                         </div>
                     </div>
                     <!-- User Message -->
