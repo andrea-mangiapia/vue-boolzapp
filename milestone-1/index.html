@@ -83,20 +83,41 @@
                     </div>
                     <!-- Messages -->
                     <div class="am-messages">
-                        <!-- Message Received -->
-                        <div class="am-message-received">
-                            Messaggio Ricevuto
-
+                        <div class="am-container-messages am-flex">
+                            <!-- Message Received -->
+                            <div class="am-msg am-message-received am-flex">
+                                <div class="am-msg-text">
+                                    Messaggio ricevuto Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque a repellendus hic nulla, nisi, iusto placeat veniam quisquam necessitatibus quasi nesciunt dolorum molestiae.
+                                </div>
+                                <div class="am-msg-date">
+                                    10/01/2020 15:30:55                                   
+                                </div>
+                            </div>
+                            <!-- Message Sent -->
+                            <div class="am-msg am-message-sent am-flex">
+                                <div class="am-msg-text">
+                                    Messaggio spedito Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque a repellendus hic nulla, nisi, iusto placeat veniam quisquam necessitatibus quasi nesciunt dolorum molestiae.
+                                </div>
+                                <div class="am-msg-date">
+                                    10/01/2020 15:30:55                                   
+                                </div>            
+                            </div>
                         </div>
-                        <!-- Message Sent -->
-                        <div class="am-message-sent">
-                            Messaggio Spedito                            
-                        </div>
-
                     </div>
                     <!-- User Message -->
-                    <div class="am-bar am-user-message am-border-col-right">
-                        Messaggio utente
+                    <div class="am-bar am-user-message am-border-col-right am-flex">
+                        <!-- Emoticon -->
+                        <div class="am-icons am-ico-msg">
+                            <i class="fa-regular fa-face-smile"></i> 
+                        </div>
+                        <!-- User Message Input -->    
+                        <div class="am-user-msg">
+                            <input type="text" id="send" placeholder="Scrivi un messaggio">
+                        </div>
+                        <!-- Audio Message -->
+                        <div class="am-icons am-ico-msg">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </div>
 
                 </div>

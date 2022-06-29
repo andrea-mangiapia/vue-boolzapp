@@ -16,6 +16,10 @@ body {
 img {
     width: 100%;
 }
+.am-search input:focus-visible, .am-user-msg input:focus-visible {
+    outline: 1px solid #009688;
+    border-radius: 2px;
+}
 
 /****** WEB APP ******/
 
@@ -31,6 +35,7 @@ img {
 .am-app-container {
     width: 80%;
     height: 95%;
+    min-width: 1000px;
     min-height: 450px;
     background-color: #eaeaea;
 }
@@ -48,7 +53,7 @@ img {
     COLUMN LEFT
 *******************/
 .am-col-left {
-    min-width: 350px;
+    min-width: 35%;
     background-color: white; 
 }
 /* Bar Left Profile */
@@ -113,11 +118,6 @@ img {
             background-clip:text;
     -webkit-text-fill-color: transparent;
 }
-
-.am-search input:focus-visible {
-    outline: 1px solid #009688;
-    border-radius: 2px;
-}
 /* Contact List */
 .am-contact-list {
     height: calc(100% - 190px);
@@ -146,16 +146,46 @@ img {
     COLUMN RIGHT
 *******************/
 .am-col-right {
-    min-width: 650px;
+    min-width: 65%;
     background-image: url(../img/mine.jpg) ;
     position: relative;
 }
 .am-border-col-right {
     border-left: 1px solid #d7d7d7;
 }
-.am-message-sent {
+/* Messages */
+.am-messages {
     height: calc(100% - 120px);
     overflow-y: auto;
+}
+.am-container-messages {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex-direction: column;
+}
+.am-msg {
+    /* min-width: 300px; */
+    width: 55%;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin: 5px 0;
+    flex-direction: column;
+}
+.am-message-received {
+    background-color: white;
+    align-self: flex-start;
+}
+.am-msg-text {
+    padding-top: 10px;
+}
+.am-msg-date {
+    align-self: flex-end;
+    font-size: 10px;
+}
+.am-message-sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
 }
 /* User Message */
 .am-user-message {
@@ -164,13 +194,15 @@ img {
     left: 0;
     bottom: 0;
 }
-
-@media screen and (min-width: 1000px) {
-    .am-col-left {
-        width: 35%;
-    }
-
-    .am-col-right {
-        width: 65%;
-    }
-  }
+.am-ico-msg i {
+    color: #6a7376;
+}
+.am-user-msg {
+    width: 85%;
+}
+.am-user-msg input {
+    width: 100%;
+    padding: 7px 5px;
+    border: #eaeaea;
+    border-radius: 2px;
+}
