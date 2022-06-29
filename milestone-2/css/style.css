@@ -131,16 +131,18 @@ img {
     border-bottom: 0;  
 }
 .am-contact{
-    height: 70px;
-    /* align-items: center; */
-    padding-left: 10px;
+    padding: 10px;
     cursor: pointer;
 }
 .am-contact:hover{
     background-color: #e9ebeb;
 }
+.am-select-user{
+    background-color: #e9ebeb;
+}
 .am-contact-name{
     font-size: 16px;
+    font-weight: 600;
 }
 
 /*******************

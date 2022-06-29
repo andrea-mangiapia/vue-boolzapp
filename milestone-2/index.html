@@ -46,18 +46,20 @@
                     <!-- Search Input -->
                     <div class="am-search am-flex">
                         <label for="search"></label>
-                        <input class="am-contact-search" id="search" type="text" placeholder="&#xf002; &ensp; Cerca o inizia una nuova chat">
+                        <input class="am-contact-search" type="text" id="search" placeholder="&#xf002; &ensp; Cerca o inizia una nuova chat">
                     </div>
                     <!-- Contact List -->
                     <div class="am-contact-list">
                         <ul>
-                            <li v-for="(contact, index) in contacts ">
+                            <li v-for="(contact, index) in contacts"  @click="selectUser(index)" :class="{'am-select-chat': currentUserActive === index}">
                                 <div class="am-single-contact">
                                     <div class="am-contact am-flex">
                                         <div class="am-user-img big am-flex">
                                             <img :src="'img/avatar'+ contact.avatar +'.jpg'" :alt="contact.name">
                                         </div>
-                                        <h3 class="am-contact-name">{{contact.name}}</h3>
+                                        <div class="am-contact-name">
+                                            {{contact.name}}
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -73,11 +75,11 @@
                     <div class="am-bar am-border-col-right am-flex">
                         <div class="am-user am-flex">
                             <div class="am-user-img">
-                                <img src="img/avatar_io.jpg" alt="Nome Utente">
+                                <img :src="'img/avatar' + contacts[currentUserActive].avatar + '.jpg'" :alt="contacts[currentUserActive].name">
                             </div>
                             <div>
                                 <div>
-                                    Nome Utente
+                                    {{contacts[currentUserActive].name}}
                                 </div>
                                 <div class="am-user-date">
                                     Ultimo accesso oggi alle
