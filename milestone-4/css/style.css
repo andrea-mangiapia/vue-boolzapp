@@ -1,0 +1,217 @@
+/* ROOT */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+/* COMMON */
+.am-flex {
+    display: flex;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.am-search input:focus-visible, .am-user-msg input:focus-visible {
+    outline: 1px solid #009688;
+    border-radius: 2px;
+}
+
+/****** WEB APP ******/
+.am-app-bg {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    min-width: 1000px;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(213,219,218,1) 15%);
+}
+.am-app-container {
+    width: 80%;
+    height: 95%;
+    background-color: #eaeaea;
+}
+.am-bar{
+    height: 60px;
+    padding: 10px;
+    background-color: #eaeaea;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*******************
+    COLUMN LEFT
+*******************/
+.am-col-left {
+    min-width: 35%;
+    background-color: white; 
+}
+/* Bar Left Profile */
+.am-user {
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+.am-user-img img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.am-user-img.big img {
+    width: 55px;
+    height: 55px;
+}
+.am-icons i {
+    font-size: 20px;
+    color: #b1b1b1;
+    padding: 0 8px;
+}
+/* Bar Notice */
+.am-notice {
+    background-color: #8edafb;
+    padding: 0 10px;
+    align-items: center;
+    height: 80px;
+}
+.am-icon-bell {
+    font-size: 20px;
+    color: #8edafb;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.am-notice-content h4 {
+    font-size: 16px;
+    line-height: 22px;
+
+}
+.am-notice-content a {
+    color: #4f7484;
+}
+/* Search Input */
+.am-search {
+    height: 50px;
+    padding: 10px;
+    background-color: #fafafa;
+}
+.am-search input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    font-family: Arial, 'FontAwesome';
+}
+.am-search input::placeholder {
+    color:transparent;
+    background:linear-gradient(to right, #b1b1b1 1.2em,#000 0);
+    -webkit-background-clip:text;
+            background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+/* Contact List */
+.am-contact-list {
+    height: calc(100% - 190px);
+    overflow-y: auto; 
+}
+.am-contact-list li {
+    border-bottom: 1px solid #eaeaea;  
+}
+.am-contact-list li:last-child {
+    border-bottom: 0;  
+}
+.am-contact{
+    padding: 10px;
+    cursor: pointer;
+}
+.am-contact:hover{
+    background-color: #e9ebeb;
+}
+.am-select-user{
+    background-color: #e9ebeb;
+}
+.am-contact-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*******************
+    COLUMN RIGHT
+*******************/
+.am-col-right {
+    min-width: 65%;
+    background-image: url(../img/mine.jpg) ;
+    position: relative;
+}
+.am-border-col-right {
+    border-left: 1px solid #d7d7d7;
+}
+/* Bar Right Profile */
+.am-user-date {
+    display: contents;
+    font-size: 11px;
+}
+/* Messages */
+.am-messages {
+    height: calc(100% - 120px);
+    overflow-y: auto;
+}
+.am-container-messages {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex-direction: column;
+}
+.am-msg {
+    /* min-width: 300px; */
+    max-width: 55%;
+    min-width: 250px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin: 5px 0;
+    flex-direction: column;
+}
+.am-message-received {
+    background-color: white;
+    align-self: flex-start;
+}
+.am-msg-text {
+    padding-top: 10px;
+}
+.am-msg-date {
+    align-self: flex-end;
+    font-size: 10px;
+}
+.am-message-sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+/* User Message */
+.am-user-message {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.am-ico-msg i {
+    color: #6a7376;
+}
+.am-user-msg {
+    width: 85%;
+}
+.am-user-msg input {
+    width: 100%;
+    padding: 7px 5px;
+    border: #eaeaea;
+    border-radius: 2px;
+}
