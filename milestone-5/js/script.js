@@ -161,7 +161,37 @@ var app = new Vue({
                     element.visible = false;
                 }
             });
-        } 
+        },
+        getContactLastDate(index) {
+            const contactMessages = this.contacts[index].messages;
+
+            // Se array è vuoto torno stringa vuota
+            if (contactMessages.length === 0) {
+                return '';
+            }
+
+            // Altrimenti la data dell'ultimo elemento dell'array
+            return contactMessages[contactMessages.length - 1].date;
+        },
+        getContactLastMessageText(index) {
+            const contactMessages = this.contacts[index].messages;
+
+            // Se array è vuoto torno stringa vuota
+            if (contactMessages.length === 0) {
+                return '';
+            }
+
+            // Altrimenti taglio il testo se necessario e torno il testo
+            let lastMessageText = contactMessages[contactMessages.length - 1].text;
+            if(lastMessageText.length > 10) {
+                lastMessageText = lastMessageText.slice(0, 18) + '...';
+
+            }
+
+            return lastMessageText;
+
+        },
+        
 	}
 
 });

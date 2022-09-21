@@ -57,14 +57,22 @@
                                 @click="selectUser(index)" 
                                 :class="{'am-select-chat': currentUserActive === index}"
                             >
-                                <div class="am-single-contact">
+                                <div class="am-single-contact am-flex-contact">
                                     <div class="am-contact am-flex">
                                         <div class="am-user-img big am-flex">
                                             <img :src="'img/avatar'+ contact.avatar +'.jpg'" :alt="contact.name">
                                         </div>
-                                        <div class="am-contact-name">
-                                            {{contact.name}}
+                                        <div>
+                                            <div class="am-contact-name">
+                                                {{contact.name}}
+                                            </div>
+                                            <div>
+                                                {{ getContactLastMessageText(index) }}
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="am-contact-last-date">
+                                        {{ getContactLastDate(index) }}
                                     </div>
                                 </div>
                             </li>
